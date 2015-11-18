@@ -20,7 +20,12 @@ ansible-playbook -i inventory playbook.yml
 
 ### Trigerring Deployment of the software on remote machine after build,testing and analysis stage completion:
 
-deploy2.yml: After the dependencies i.e. the system packages have been installed, this playbook pulls the latest code from github, the url to which is specified in vars.yml and populates the destination folder tree which was created by running playbook.yml
+We are using another ansible playbook(deploy2.yml) for triggering deployment of the software on the droplet.
+
+deploy2.yml: After the dependencies i.e. the system packages have been installed, this playbook pulls the latest code from github, the url to which is specified in vars.yml and populates the destination folder tree which was created by running playbook.yml. The command associated with running this playbooks is:
+```
+ansible-playbook -i inventory deploy2.yml
+```
 
 
 * The ability to deploy software to the production environment triggered *after* build, testing, and analysis stage is completed. The deployment needs to occur on actual remote machine/VM (e.g. AWS, droplet, VCL), and not a local VM.
