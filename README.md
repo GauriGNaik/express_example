@@ -27,14 +27,13 @@ deploy2.yml: After the dependencies i.e. the system packages have been installed
 ansible-playbook -i inventory deploy2.yml
 ```
 
-### Feature Flags
+### Feature Flags using global redis store
 
 ### Monitoring and sending alerts
 
+We are monitoring the deployed application based on <metric1> and <metric2>. If the usage crosses a threshold<threshold>, an SMS alert is sent. The SMS alerts are sent using the Twilio API for NodeJs.
 
-* The ability to use feature flags, serviced by a global redis store, to toggle functionality of a deployed feature in production.
 
-* The ability to monitor the deployed application (using at least 2 metrics) and send alerts using email or SMS (e.g., smtp, mandrill, twilio). An alert can be sent based on some predefined rule.
 
 * The ability to perform a canary release: Using a proxy/load balancer server, route a percentage of traffic to a newly staged version of software and remaining traffic to a stable version of software. Stop routing traffic to canary if alert is raised.
 
