@@ -8,8 +8,6 @@ In this milestone, we have created a deployment pipeline which supports the foll
 
 ### Properties
 
-Your production infrastructure and deployment pipeline should support the following properties.
-
 * ###Automatic Configuration of Production Environment using Ansible
 
 
