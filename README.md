@@ -12,7 +12,7 @@ In this milestone, we have created a deployment pipeline which supports the foll
 We have used ansible for configured management of our production environment. We are using an ansible playbook(playbook.yml) for automatic configuration of the droplet.
 
 playbook.yml : On running this, the destination folder on the remote machine is created and a list of system packages are
-installed on the droplet. The paths to the destination folder directory and the list of system packages to install is listed in vars.yml.The IP address of the droplet is contained in the inventory file.
+installed on the droplet. The paths to the destination folder directory and the list of system packages to install is listed in vars.yml.The IP address of the droplet is contained in the inventory file. The system packages chosen for installation are nodejs, npm, git.
 The command associated with running this playbooks is:
 ```
 ansible-playbook -i inventory playbook.yml
