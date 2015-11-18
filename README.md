@@ -4,9 +4,7 @@ This is an example application to accompany the article 'Creating a basic site w
 
 # Milestone: DEPLOYMENT
 
-Previously, we've focused on building, testing, and analysis of our software in a continuous deployment pipeline. Now, we're ready to start deploying software into production environments.
-
-In our deployment workshop, we've learned to how to deploy a web app using a green-blue deployment strategy. In this MILESTONE, we will extend our deployment pipeline to support additional concerns related to deployment.
+In this milestone, we have created a deployment pipeline which supports the following properties:
 
 ### Properties
 
