@@ -27,8 +27,8 @@ deploy2.yml: After the dependencies i.e. the system packages have been installed
 ansible-playbook -i inventory deploy2.yml
 ```
 
+### Feature Flags
 
-* The ability to deploy software to the production environment triggered *after* build, testing, and analysis stage is completed. The deployment needs to occur on actual remote machine/VM (e.g. AWS, droplet, VCL), and not a local VM.
 
 * The ability to use feature flags, serviced by a global redis store, to toggle functionality of a deployed feature in production.
 
