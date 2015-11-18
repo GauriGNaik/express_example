@@ -31,7 +31,7 @@ ansible-playbook -i inventory deploy2.yml
 
 ### Monitoring and sending alerts
 
-We are monitoring the deployed application based on <metric1> and <metric2>. If the usage crosses a threshold<threshold>, an SMS alert is sent. The SMS alerts are sent using the Twilio API for NodeJs.
+We are monitoring the deployed application based on <metric1> and <metric2>. If the usage crosses a threshold<threshold>, an SMS alert is sent. The SMS alerts are sent using the [Twilio](https://www.twilio.com/) API for NodeJs.
 
 ### Canary Release
 
