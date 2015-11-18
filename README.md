@@ -29,6 +29,8 @@ ansible-playbook -i inventory deploy2.yml
 
 ### Feature Flags
 
+### Monitoring and sending alerts
+
 
 * The ability to use feature flags, serviced by a global redis store, to toggle functionality of a deployed feature in production.
 
