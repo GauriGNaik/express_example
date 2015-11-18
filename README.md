@@ -33,9 +33,11 @@ ansible-playbook -i inventory deploy2.yml
 
 We are monitoring the deployed application based on <metric1> and <metric2>. If the usage crosses a threshold<threshold>, an SMS alert is sent. The SMS alerts are sent using the Twilio API for NodeJs.
 
+### Canary Release
 
+Using a proxy server, <x>% of the traffic is routed to the production server, while the rest <x>% is routed to the canary.
+We keep checking for alerts(as specified above) and stop routing traffic to the canary if an alert is raised. Redis has been used to accomplish the same.
 
-* The ability to perform a canary release: Using a proxy/load balancer server, route a percentage of traffic to a newly staged version of software and remaining traffic to a stable version of software. Stop routing traffic to canary if alert is raised.
 
 
 
