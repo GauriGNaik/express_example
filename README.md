@@ -10,7 +10,9 @@ In this milestone, we have created a deployment pipeline which supports the foll
 
 Your production infrastructure and deployment pipeline should support the following properties.
 
-* The ability to configure a production environment *automatically*, using a configuration management tool, such as ansible, or configured using docker.
+* ###Automatic Configuration of Production Environment using Ansible
+
+
 
 * The ability to deploy software to the production environment triggered *after* build, testing, and analysis stage is completed. The deployment needs to occur on actual remote machine/VM (e.g. AWS, droplet, VCL), and not a local VM.
 
