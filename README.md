@@ -101,7 +101,8 @@ Once the commit is done and build is successful, it is followed by pre-push hook
   Using a proxy server, 70% of the traffic is routed to the production server, while the rest 30% is routed to the canary. The criteria for routing is based on memory Load and CPU usage of the instance by the application. Once it reaches a threshold, the traffic is re-routed from canary back to production instance.
   We keep checking for alerts(as specified above) and stop routing traffic to the canary if an alert is raised. Redis has been used to accomplish the same.
 
-
+###Screencast
+![screencast for m3](https://cloud.githubusercontent.com/assets/11006675/11262535/68c9701c-8e4e-11e5-9be5-24b465f61949.gif)
 
 
 
