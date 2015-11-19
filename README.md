@@ -37,7 +37,7 @@ Automatic build is done using git post-commit hook.
 Once the commit is done and build is successful, it is followed by pre-push hook,  the ansible code is configured to run through pre-push hook, install the dependencies on remote instances(droplet here) and deploy the running application on instances.
 
 
-1. ###Automatic Configuration of Production Environment using Ansible:
+1. ####Automatic Configuration of Production Environment using Ansible:
 
     We have used ansible for configured management of our production environment. We are using an ansible playbook(playbook.yml) for automatic configuration of the droplet.
   
@@ -47,7 +47,7 @@ Once the commit is done and build is successful, it is followed by pre-push hook
   ```
   ansible-playbook -i inventory playbook.yml
   ```
-2. ###Trigerring Deployment of the software on remote machine after build,testing and analysis stage completion:
+2. ####Trigerring Deployment of the software on remote machine after build,testing and analysis stage completion:
 
   We are using another ansible playbook(deploy2.yml) for triggering deployment of the software on the droplet.
   
@@ -92,7 +92,7 @@ Once the commit is done and build is successful, it is followed by pre-push hook
     });
   ```
 
-4. ###Monitoring and sending alerts
+4. ####Monitoring and sending alerts
 
   We are monitoring the deployed application based on <metric1> and <metric2>. If the usage crosses a threshold<threshold>, an SMS alert is sent. The SMS alerts are sent using the [Twilio](https://www.twilio.com/) API for NodeJs.
   
