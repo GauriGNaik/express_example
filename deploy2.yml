@@ -1,0 +1,20 @@
+---
+- hosts: digitalocean
+  vars_files:
+    - vars.yml
+  sudo: true
+  sudo_user: root
+
+  tasks:  
+    - name: clone project repo in destination
+      git: repo={{ project_repo }} dest={{ project_root }}/code/ accept_hostkey=true
+      
+    - name: Execute the script for npm install
+      command: sh /root/ansiblescripts/installNPM.sh
+
+    - name: Execute the script for running node App
+      command: sh /root/ansiblescripts/executeNodeApp.sh
+    
+    - name: Start monitoring
+      command: sh /root/ansiblescripts/executeMonitoringApp.sh   
+      
