@@ -92,6 +92,8 @@ Once the commit is done and build is successful, it is followed by pre-push hook
     });
   ```
 ![app](https://cloud.githubusercontent.com/assets/8634231/11262640/9cf6c596-8e4f-11e5-814d-1eef218f62ac.png)
+<img width="1360" alt="screen shot 2015-11-18 at 11 57 22 pm" src="https://cloud.githubusercontent.com/assets/8634231/11262700/5c15e5b0-8e50-11e5-9bb2-5214de2acadd.png">
+
 
 4. ####Monitoring and sending alerts
 
