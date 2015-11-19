@@ -10,10 +10,11 @@ var app = http.createServer(function (req, res) {
     })
   , io = sio.listen(app);
 function sendAlert() {
-         var client = new twilio.RestClient('AC5915a5977751e47d1dc56d40b02e077f', 'e0bed5eff667597625662a5a75fab636');
+      //Put own numbers and authorization tokens. Intentionally left blank
+      var client = new twilio.RestClient('', '');
 client.sms.messages.create({
-    to:'+19195902215',
-    from:'+12027967832',
+    to:'',
+    from:'',
     body:'Message alert: Express application has exceeded memory usage threshold'
 }, function(error, message) {
     // The HTTP request to Twilio will run asynchronously. This callback
