@@ -1,10 +1,7 @@
-# Example Express Application
-
-This is an example application to accompany the article 'Creating a basic site with node.js and Express'. The site is hosted on Heroku.
-
 # Milestone: DEPLOYMENT
 
-Our production environment is essentially a Digital Ocean Droplet with Ubuntu installed.
+Our production environment is essentially a Digital Ocean Droplet with Ubuntu installed. We have used an example nodejs application for this purpose.
+
 In this milestone, we have created a deployment pipeline which supports the following properties:
 
 For task 1 and 2 we have added the automatic configuration script in git pre-push hook.
@@ -73,7 +70,7 @@ We are monitoring the deployed application based on <metric1> and <metric2>. If 
 
 ### Canary Release
 
-Using a proxy server, <x>% of the traffic is routed to the production server, while the rest <x>% is routed to the canary.
+Using a proxy server, 70% of the traffic is routed to the production server, while the rest 30% is routed to the canary.
 We keep checking for alerts(as specified above) and stop routing traffic to the canary if an alert is raised. Redis has been used to accomplish the same.
 
 
