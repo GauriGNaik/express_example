@@ -59,7 +59,7 @@ Once the commit is done and build is successful, it is followed by pre-push hook
 3. ###Feature Flags using global redis store
 
   We are using Redis store key-value to store a global feature flag. We have added a new feature - "aboutFeature.jade page" to test the functionality. Based on the feature flag value, we are toggling the new page availability.
-  The value of the feature flag is toggled using redi-cli from 'false' to 'true'.
+  The value of the feature flag is toggled using redi-cli from 'false' to 'true'. If it is set to 'true' the new Page is displayed to users.
   
   ```
   127.0.0.1:6379> GET devOpsKey
@@ -94,7 +94,7 @@ Once the commit is done and build is successful, it is followed by pre-push hook
 
 4. ####Monitoring and sending alerts
 
-  We are monitoring the deployed application based on <metric1> and <metric2>. If the usage crosses a threshold<threshold>, an SMS alert is sent. The SMS alerts are sent using the [Twilio](https://www.twilio.com/) API for NodeJs.
+  We are monitoring the deployed application based on memoryLoad and CPU usage. If the usage crosses a threshold<threshold>, an SMS alert is sent. The SMS alerts are sent using the [Twilio](https://www.twilio.com/) API for NodeJs.
   
 5. ####Canary Release
 
