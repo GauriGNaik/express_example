@@ -94,7 +94,7 @@ Once the commit is done and build is successful, it is followed by pre-push hook
 
 4. ####Monitoring and sending alerts
 
-  We are monitoring the deployed application based on memoryLoad and CPU usage. If the usage crosses a threshold<threshold>, an SMS alert is sent. The SMS alerts are sent using the [Twilio](https://www.twilio.com/) API for NodeJs.
+  We are monitoring the deployed application based on memoryLoad and CPU usage. If the usage crosses a threshold 70%, an SMS alert is sent. The SMS alerts are sent using the [Twilio](https://www.twilio.com/) API for NodeJs.
   
 5. ####Canary Release
 
