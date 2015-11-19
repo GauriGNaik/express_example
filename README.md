@@ -32,6 +32,37 @@ ansible-playbook -i inventory deploy2.yml
 We are using Redis store key-value to store a global feature flag. We have added a new feature - "a new page" to test the functionality. Based on the feature flag value, we are toggling the new page availability.
 The value of the feature flag is toggled using redi-cli from 'false' to 'true'.
 
+```
+127.0.0.1:6379> GET devOpsKey
+"false"
+```
+
+```
+127.0.0.1:6379> SET devOpsKey true
+OK
+```
+
+```
+127.0.0.1:6379> GET devOpsKey
+"true"
+```
+
+```
+app.get('/about', function(req, res){
+  client.get("devOpsKey", function(err,value){ 
+    if (err) throw err
+      if(value=="true"){
+        res.render('aboutFeature', {
+         title: 'AboutFeature'
+        });
+      }else{
+        res.render('about', {
+        title: 'About'
+      });
+    }
+  });
+```
+
 ### Monitoring and sending alerts
 
 We are monitoring the deployed application based on <metric1> and <metric2>. If the usage crosses a threshold<threshold>, an SMS alert is sent. The SMS alerts are sent using the [Twilio](https://www.twilio.com/) API for NodeJs.
