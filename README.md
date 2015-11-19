@@ -101,6 +101,7 @@ After adding feature, the about page is getting redirected to the below new Page
 4. ####Monitoring and sending alerts
 
   We are monitoring the deployed application based on memoryLoad and CPU usage. If the usage crosses a threshold 70%, an SMS alert is sent. The SMS alerts are sent using the [Twilio](https://www.twilio.com/) API for NodeJs.
+  For Alerts, create a Twilio account and get the API keys to access the api.
   
   Alert Snapshot on Phone:
   
