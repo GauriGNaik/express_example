@@ -7,6 +7,10 @@ This is an example application to accompany the article 'Creating a basic site w
 Our production environment is essentially a Digital Ocean Droplet with Ubuntu installed.
 In this milestone, we have created a deployment pipeline which supports the following properties:
 
+For task 1 and 2 we have added the automatic configuration script in git pre-push hook.
+Once the commit is done and build is successful, the ansible code is configured to run, install the dependencies on remote instances(droplet here) and deploy the running application on instances.
+
+
 ### Automatic Configuration of Production Environment using Ansible
 
 We have used ansible for configured management of our production environment. We are using an ansible playbook(playbook.yml) for automatic configuration of the droplet.
