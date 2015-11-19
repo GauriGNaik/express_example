@@ -37,7 +37,7 @@ Automatic build is done using git post-commit hook.
 Once the commit is done and build is successful, it is followed by pre-push hook,  the ansible code is configured to run through pre-push hook, install the dependencies on remote instances(droplet here) and deploy the running application on instances.
 
 
-1. Automatic Configuration of Production Environment using Ansible:
+1. ###Automatic Configuration of Production Environment using Ansible:
 
     We have used ansible for configured management of our production environment. We are using an ansible playbook(playbook.yml) for automatic configuration of the droplet.
   
@@ -47,7 +47,7 @@ Once the commit is done and build is successful, it is followed by pre-push hook
   ```
   ansible-playbook -i inventory playbook.yml
   ```
-2. Trigerring Deployment of the software on remote machine after build,testing and analysis stage completion:
+2. ###Trigerring Deployment of the software on remote machine after build,testing and analysis stage completion:
 
   We are using another ansible playbook(deploy2.yml) for triggering deployment of the software on the droplet.
   
@@ -56,7 +56,7 @@ Once the commit is done and build is successful, it is followed by pre-push hook
   ansible-playbook -i inventory deploy2.yml
   ```
 
-3. Feature Flags using global redis store
+3. ###Feature Flags using global redis store
 
   We are using Redis store key-value to store a global feature flag. We have added a new feature - "a new page" to test the functionality. Based on the feature flag value, we are toggling the new page availability.
   The value of the feature flag is toggled using redi-cli from 'false' to 'true'.
@@ -92,10 +92,11 @@ Once the commit is done and build is successful, it is followed by pre-push hook
     });
   ```
 
-4. Monitoring and sending alerts
+4. ###Monitoring and sending alerts
 
   We are monitoring the deployed application based on <metric1> and <metric2>. If the usage crosses a threshold<threshold>, an SMS alert is sent. The SMS alerts are sent using the [Twilio](https://www.twilio.com/) API for NodeJs.
-5. Canary Release
+  
+5. ###Canary Release
 
   Using a proxy server, 70% of the traffic is routed to the production server, while the rest 30% is routed to the canary. The criteria for routing is based on memory Load and CPU usage of the instance by the application. Once it reaches a threshold, the traffic is re-routed from canary back to production instance.
   We keep checking for alerts(as specified above) and stop routing traffic to the canary if an alert is raised. Redis has been used to accomplish the same.
