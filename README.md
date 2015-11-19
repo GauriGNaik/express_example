@@ -93,12 +93,19 @@ Once the commit is done and build is successful, it is followed by pre-push hook
   ```
 <img width="988" alt="screen shot 2015-11-18 at 11 50 39 pm" src="https://cloud.githubusercontent.com/assets/8634231/11262705/85b87e0a-8e50-11e5-9fa7-3b56e6219357.png">
 
+After adding feature, the about page is getting redirected to the below new Page:
+
 <img width="1360" alt="screen shot 2015-11-18 at 11 57 22 pm" src="https://cloud.githubusercontent.com/assets/8634231/11262700/5c15e5b0-8e50-11e5-9bb2-5214de2acadd.png">
 
 
 4. ####Monitoring and sending alerts
 
   We are monitoring the deployed application based on memoryLoad and CPU usage. If the usage crosses a threshold 70%, an SMS alert is sent. The SMS alerts are sent using the [Twilio](https://www.twilio.com/) API for NodeJs.
+  
+  Alert Snapshot on Phone:
+  
+  ![20151118202738](https://cloud.githubusercontent.com/assets/8634231/11262716/adc3dc32-8e50-11e5-8f18-6bb29fab3b3e.jpg)
+
   
 5. ####Canary Release
 
