@@ -37,7 +37,8 @@ Automatic build is done using git post-commit hook.
 Once the commit is done and build is successful, it is followed by pre-push hook,  the ansible code is configured to run through pre-push hook, install the dependencies on remote instances(droplet here) and deploy the running application on instances.
 
 
-1. Automatic Configuration of Production Environment using Ansible
+1. Automatic Configuration of Production Environment using Ansible:
+
     We have used ansible for configured management of our production environment. We are using an ansible playbook(playbook.yml) for automatic configuration of the droplet.
   
   playbook.yml : On running this, the destination folder on the remote machine is created and a list of system packages are
