@@ -96,7 +96,7 @@ Once the commit is done and build is successful, it is followed by pre-push hook
 
   We are monitoring the deployed application based on <metric1> and <metric2>. If the usage crosses a threshold<threshold>, an SMS alert is sent. The SMS alerts are sent using the [Twilio](https://www.twilio.com/) API for NodeJs.
   
-5. ###Canary Release
+5. ####Canary Release
 
   Using a proxy server, 70% of the traffic is routed to the production server, while the rest 30% is routed to the canary. The criteria for routing is based on memory Load and CPU usage of the instance by the application. Once it reaches a threshold, the traffic is re-routed from canary back to production instance.
   We keep checking for alerts(as specified above) and stop routing traffic to the canary if an alert is raised. Redis has been used to accomplish the same.
