@@ -58,7 +58,7 @@ Once the commit is done and build is successful, it is followed by pre-push hook
 
 3. ###Feature Flags using global redis store
 
-  We are using Redis store key-value to store a global feature flag. We have added a new feature - "a new page" to test the functionality. Based on the feature flag value, we are toggling the new page availability.
+  We are using Redis store key-value to store a global feature flag. We have added a new feature - "aboutFeature.jade page" to test the functionality. Based on the feature flag value, we are toggling the new page availability.
   The value of the feature flag is toggled using redi-cli from 'false' to 'true'.
   
   ```
