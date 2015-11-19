@@ -1,0 +1,11 @@
+---
+project_name: sampleproject
+project_root: /var/projects/mysampleproject
+project_repo: git@github.com:GauriGNaik/express_example.git
+ver: 1.0.0
+system_packages:
+  - build-essential
+  - nodejs
+  - npm
+  - git
+
